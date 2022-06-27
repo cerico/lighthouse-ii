@@ -3,7 +3,7 @@
   hosts: localhost
   connection: local 
   vars:
-    - location: '/tmp/lighthouses'
+    - location: '/var/www/html/lighthouses.io37.ch'
   tasks:
     - name: make lighthouses
       shell: "node index.js"
