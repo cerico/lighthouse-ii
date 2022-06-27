@@ -38,13 +38,3 @@ jobs:
           remote_host: io37.ch
           remote_user: deploy
           remote_key: ${{ secrets.DEPLOY_KEY }}
-          
-      - name: executing remote ssh commands using password
-        uses: appleboy/ssh-action@master
-        with:
-          host: io37.ch
-          username: deploy
-          key: ${{ secrets.DEPLOY_KEY }}
-
-            
-
