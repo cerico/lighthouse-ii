@@ -3,7 +3,7 @@ const { urls } = require('./urls');
 const puppeteer = require('puppeteer');
 const lighthouse = require('lighthouse');
 const config = require('lighthouse/lighthouse-core/config/lr-desktop-config.js');
-const reportGenerator = require('lighthouse/lighthouse-core/report/report-generator');
+const reportGenerator = require('lighthouse/report/generator/report-generator');
 const reportsLocation = '/var/www/html/lighthouses.io37.ch';
 
 (async() => {
