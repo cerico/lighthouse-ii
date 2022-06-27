@@ -1,0 +1,4 @@
+make: Entering directory `/Users/picfair/github/lighthouse-iii'
+ansible-playbook -e @secrets lighthouses.yml
+make: Leaving directory `/Users/picfair/github/lighthouse-iii'
+ 

@@ -1,0 +1,6 @@
+source 'https://rubygems.org'
+gem "json", "~> 2.3"
+gem 'sequel', '~>5.10'
+gem "pg", "~> 1.2"
+
+gem "pry", "~> 0.13.1"

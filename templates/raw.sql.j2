@@ -1,0 +1,51 @@
+{% for a in mdata %}
+  {% if a[0] %}
+  {% for b in a[1] %}
+    {% if b[1] == 'first-contentful-paint' %}
+      {% if b[2] == None %}
+        ('{{ a[0] }}', 0,
+      {% else %}
+        ('{{ date.start }}', '{{ a[0] }}', {{ b[2] | int }},
+      {% endif %}
+    {% endif %}
+    {% if b[1] == 'speed-index' %}
+      {% if b[2] == None %}
+        0,
+      {% else %}
+        {{ b[2] | int }},
+      {% endif %}
+    {% endif %}
+    {% if b[1] == 'interactive' %}
+      {% if b[2] == None %}
+        0,
+      {% else %}
+        {{ b[2] | int }},
+      {% endif %}
+    {% endif %}
+    {% if b[1] == 'resource-summary' %}
+      {% if b[4] == None %}
+        0,
+        {% else %}
+        {{ b[4] }},
+      {% endif %}
+      {% if b[5] == None %}
+        0,
+      {% else %}
+        {{ b[5] | int }},
+      {% endif %}
+      {% if b[6] == None %}
+        0,
+      {% else %}
+        {{ b[6] }},
+      {% endif %}
+      {% if b[7] == None %}
+        0
+        {% else %}
+        {{ b[7] | int }}
+      {% endif %}
+    ),
+    {% endif %}
+  {% endfor %}
+    {% endif %}
+{% endfor %}
+zzz;

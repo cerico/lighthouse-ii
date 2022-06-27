@@ -1,0 +1,51 @@
+<html>
+<head>
+  <title>Picfair Lighthouse {{ friendly_date.stdout }}</title>
+  <meta property="og:site_name" content="Lighthouses">
+  <meta property="og:title" content="Picfair Lighthouses - {{ friendly_date.stdout }}">
+  <meta property="og:description" content="Performance, accessibility, best practice, and SEO scores">
+  <meta property="og:url" content="https://lighthouses.io37.ch">
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <link rel="apple-touch-icon" href="https://lighthouses.io37.ch/swan.jpg">
+  <meta property="og:image" content="https://lighthouses.io37.ch/flagscore.jpg">
+</head>
+<body class="lh-vars">
+  <div class="date">Scored: {{ friendly_date.stdout }}</div>
+  {% for a in ldata %}
+    {% if a[0] %}
+    <div class="app">
+      <a href="./{{ a[0].replace('https://','').replace('www.picfair.com/','').replace('.com/','.com').replace('/', '-').replace('?q=','-') }}.html">
+        <div class="title">{{ a[0] }}</div>
+        <div class="lh-scores-header">
+          {% for b in a[1] %}
+            {% if b[0] != 'Progressive Web App' %}
+              {% if b[1] == None %}
+                {% set c = 0 %}
+              {% else %}
+                {% set c = ((b[1]*100) | int) %}
+              {% endif %}
+              {% if c < 49 %}
+                <div class="lh-gauge__wrapper lh-gauge__wrapper--fail">
+              {% elif c < 80 %}
+                <div class="lh-gauge__wrapper lh-gauge__wrapper--average">
+              {% else %}
+                <div class="lh-gauge__wrapper lh-gauge__wrapper--pass">
+              {% endif %}
+                  <div class="lh-gauge__svg-wrapper">
+                    <svg viewBox="0 0 120 120" class="lh-gauge">
+                      <circle class="lh-gauge-base" r="56" cx="60" cy="60" stroke-width="8"></circle>
+                      <circle class="lh-gauge-arc" r="56" cx="60" cy="60" stroke-width="8" style="transform: rotate(-87.9537deg); stroke-dasharray: {{ (c*3.51) | int }}px, 351.858px;"></circle>
+                    </svg>
+                  </div>
+                  <div class="lh-gauge__percentage">{{ c }}</div>
+                  <div class="lh-gauge__label">{{ b[0] }}</div>
+                </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </a>
+    </div>
+  {% endif %}
+  {% endfor %}
+</body>
+</html>

@@ -1,0 +1,20 @@
+{% for a in ldata %}
+  {% if a[0] %}
+    ('{{ date.start }}', '{{ a[0] }}',
+    {% for b in a[1] %}
+      {% if b[0] != 'Progressive Web App' %}
+        {% if b[1] == None %}
+          {% set c = 0 %}
+        {% else %}
+          {% set c = ((b[1]*100) | int) %}
+        {% endif %}
+        {% if b[0] == 'SEO' %}
+          {{ c }}),
+        {% else %}
+          {{ c }},
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+zzz

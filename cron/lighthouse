@@ -1,0 +1,1 @@
+27 04 * * * picfair make -f /home/picfair/lighthouse/Makefile -C /home/picfair/lighthouse

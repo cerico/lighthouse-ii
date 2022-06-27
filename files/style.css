@@ -1,0 +1,127 @@
+body {
+  background: #212121;
+  color: #FFF;
+  --color-average: #FFA400;
+  --color-fail: #FF4E42;
+  --color-pass: #0CCE6B;
+
+  --gauge-circle-size: 80px;
+  --gauge-label-font-size: 20px;
+  --gauge-label-line-height: 26px;
+  --gauge-percentage-font-size: 28px;
+  --gauge-wrapper-width: 148px;
+  --score-container-padding: 8px;
+}
+
+a {
+  text-decoration: none;
+  color: white
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    --gauge-circle-size: 72px;
+    --gauge-label-font-size: 14px;
+    --gauge-label-line-height: 20px;
+    --gauge-percentage-font-size: 26px;
+    --gauge-wrapper-width: 112px;
+  }
+}
+
+.lh-scores-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.lh-gauge__wrapper--pass {
+  color: var(--color-pass);
+  fill: var(--color-pass);
+  stroke: var(--color-pass);
+}
+
+.lh-gauge__wrapper--average {
+  color: var(--color-average);
+  fill: var(--color-average);
+  stroke: var(--color-average);
+}
+
+.lh-gauge__wrapper--fail {
+  color: var(--color-fail);
+  fill: var(--color-fail);
+  stroke: var(--color-fail);
+}
+
+.lh-gauge {
+  stroke-linecap: round;
+  width: var(--gauge-circle-size);
+  height: var(--gauge-circle-size);
+}
+
+.lh-gauge-base {
+    opacity: 0.1;
+    stroke: var(--circle-background);
+}
+
+.lh-gauge-arc {
+    fill: none;
+    stroke: var(--circle-color);
+    transform-origin: 50% 50%;
+    animation: load-gauge var(--transition-length) ease forwards;
+    animation-delay: 250ms;
+}
+
+.lh-gauge__svg-wrapper {
+  position: relative;
+  height: var(--gauge-circle-size);
+}
+
+@keyframes load-gauge {
+  from { stroke-dasharray: 0 352; }
+}
+
+.lh-gauge__percentage {
+  width: 100%;
+  height: var(--gauge-circle-size);
+  position: absolute;
+  font-size: calc(var(--gauge-circle-size) * 0.34 + 1.3px);
+  line-height: 0;
+  text-align: center;
+  top: calc(var(--score-container-padding) + var(--gauge-circle-size) / 2);
+}
+
+.lh-gauge__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none;
+  padding: var(--score-container-padding);
+  --transition-length: 1s;
+  contain: content;
+  will-change: opacity;
+  width: var(--gauge-wrapper-width);
+}
+
+.lh-gauge__label {
+  font-size: var(--gauge-label-font-size);
+  line-height: var(--gauge-label-line-height);
+  margin-top: 10px;
+  text-align: center;
+  color: white;
+}
+.title {
+    font-size: 1rem;
+    margin-top: 1rem;
+    padding-left: 1rem;
+  }
+.app {
+  border-bottom: 1px solid;
+}
+.date {
+  text-align: right;
+  padding-right: 15px;
+}
+

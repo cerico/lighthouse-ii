@@ -1,0 +1,43 @@
+---
+- name: Prepare
+  hosts: localhost
+  connection: local 
+  vars:
+    - location: '/tmp/lighthouses'
+  tasks:
+    - name: make lighthouses
+      shell: "node index.js"
+
+    - name: register friendly date
+      shell: "date | awk -F' ' '{print $2,$3,$4}'"
+      register: friendly_date
+
+    - name: register raw date
+      shell: "date"
+      register: date
+      
+    - name: Display the JSON file content
+      shell: "cat {{ item }}"
+      with_fileglob:
+        - "{{ location }}/*.json"
+      register: lighthouse
+
+    - name: Iterate Json
+      set_fact:
+        ldata: "{{ (ldata | default([])) + [item.stdout | from_json | json_query('[requestedUrl, categories.*.[title, score]]')] }}"
+      loop: "{{ lighthouse.results }}"
+
+    - name: create lighthouses
+      template:
+        src: index.html.j2
+        dest: "{{ location }}/index.html"
+
+    - name: Copy css
+      copy:
+        src:  style.css
+        dest: "{{ location }}/style.css"
+
+    - name: bundle install
+      command: bundle install
+      args:
+        chdir: "{{ playbook_dir }}"
