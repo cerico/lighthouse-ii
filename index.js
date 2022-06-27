@@ -4,7 +4,7 @@ const puppeteer = require('puppeteer');
 const lighthouse = require('lighthouse');
 const config = require('lighthouse/lighthouse-core/config/lr-desktop-config.js');
 const reportGenerator = require('lighthouse/lighthouse-core/report/report-generator');
-const reportsLocation = '/tmp/lighthouses';
+const reportsLocation = '/var/www/html/lighthouses.io37.ch';
 
 (async() => {
   let browser = null;
