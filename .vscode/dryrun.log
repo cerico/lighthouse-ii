@@ -1,5 +1,5 @@
 make --dry-run --always-make --keep-going --print-directory
-make: Entering directory `/Users/picfair/github/lighthouse-iii'
+make: Entering directory `/Users/picfair/github/lighthouse-ii'
 ansible-playbook lighthouses.yml
-make: Leaving directory `/Users/picfair/github/lighthouse-iii'
+make: Leaving directory `/Users/picfair/github/lighthouse-ii'
  
