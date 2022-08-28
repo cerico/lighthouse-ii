@@ -1,6 +1,6 @@
 # Lighthouse
 
-[![Deploy Actions](https://github.com/picfair/lighthouse/actions/workflows/deploy.yml/badge.svg)](https://github.com/picfair/lighthouse/actions/workflows/deploy.yml)
+[![Deploy Actions](https://github.com/cerico/lighthouse-ii/actions/workflows/deploy.yml/badge.svg)](https://github.com/cerico/lighthouse-ii/actions/workflows/deploy.yml)
 
 ![](flagscore.jpg)
 
