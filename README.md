@@ -13,7 +13,7 @@
 
 # In production
 
-https://lighthouse.picfair.com
+https://lighthouses.io37.ch
 
 ## How do I monitor a new url?
 
