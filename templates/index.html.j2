@@ -15,7 +15,10 @@
     {% if a[0] %}
     <div class="app">
       <a href="./{{ a[0].replace('https://','').replace('www.picfair.com/','').replace('.com/','.com').replace('/', '-').replace('?q=','-') }}.html">
-        <div class="title">{{ a[0] }}</div>
+        <div class="title">
+          <span>{{ a[0] }}</span>
+          <span class="right">{{ friendly_date.stdout }}</span>
+        </div>
         <div class="lh-scores-header">
           {% for b in a[1] %}
             {% if b[0] != 'PWA' %}
