@@ -4,7 +4,7 @@
   connection: local 
   tasks:
     - name: Get the netlify sites
-      shell: "netlify sites:list | grep url | awk -F'https://' '{print $2}'"
+      shell: "./node_modules/netlify-cli/bin/run sites:list | grep url | awk -F'https://' '{print $2}'"
       register: res
 
     - name: create netlify sites file
