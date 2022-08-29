@@ -1,0 +1,9 @@
+ module.exports = {
+  urls: [
+    { url: 'www.boots.com' },
+    { url: 'www.itv.com' },
+{% for a in res.stdout_lines %}
+    { url: '{{ a }}' },
+{% endfor %}
+  ]
+};

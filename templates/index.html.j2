@@ -14,7 +14,7 @@
   {% for a in ldata %}
     {% if a[0] %}
     <div class="app">
-      <a href="./{{ a[0].replace('https://','').replace('www.picfair.com/','').replace('.com/','.com').replace('/', '-').replace('?q=','-') }}.html">
+      <a href="./{{ a[0].replace('https://','').replace('www.picfair.com/','').rstrip('/').replace('/', '-').replace('?q=','-') }}.html">
         <div class="title">
           <span>{{ a[0] }}</span>
           <span class="right">{{ friendly_date.stdout }}</span>

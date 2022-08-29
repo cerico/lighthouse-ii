@@ -1,0 +1,15 @@
+---
+- name: Prepare
+  hosts: localhost
+  connection: local 
+  tasks:
+    - name: Get the netlify sites
+      shell: "netlify sites:list | grep url | awk -F'https://' '{print $2}'"
+      register: res
+
+    - name: create netlify sites file
+      template:
+        src: urls.j2
+        dest: urls.js
+    
+    
