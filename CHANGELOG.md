@@ -1,3 +1,12 @@
+## [1.2.1](https://github.com/cerico/lighthouse-ii/compare/v1.2.0...v1.2.1) (2023-08-05)
+
+
+### Bug Fixes
+
+* dont commit logs ([3114a95](https://github.com/cerico/lighthouse-ii/commit/3114a95360b75c881daf49ce3d1df43880cba474))
+
+
+
 # [1.2.0](https://github.com/cerico/lighthouse-ii/compare/v1.1.0...v1.2.0) (2023-08-02)
 
 
