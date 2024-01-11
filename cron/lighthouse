@@ -1,1 +1,1 @@
-27 04 * * * deploy make -f /home/deploy/lighthouse/Makefile -C /home/deploy/lighthouse
+27 04 * * * deploy make -f /home/deploy/lighthouse/Makefile lighthouses -C /home/deploy/lighthouse
