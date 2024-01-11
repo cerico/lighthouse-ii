@@ -1,0 +1,33 @@
+name: Test
+on:
+  push:
+    branches-ignore:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: make a gitconfig
+        run: |
+          echo -e "[user]
+            name = github-runner
+            email = githubrunner@io37.ch
+          " > ~/.gitconfig
+
+      - name: is gitconfig there
+        run: cat ~/.gitconfig
+
+      - name: install packages
+        run: npm i
+
+      - name: create directory
+        run: sudo mkdir -p /var/www/html/lighthouses.io37.ch
+
+      - name: chown directory
+        run: sudo chown -R runner:runner /var/www/html/lighthouses.io37.ch
+
+      - name: Build the lighthouses
+        run: make lighthouses
