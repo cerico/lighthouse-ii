@@ -1,1 +1,3 @@
-27 04 * * * deploy make -f /home/deploy/lighthouse/Makefile lighthouses -C /home/deploy/lighthouse
+SHELL=/usr/bin/zsh
+15 15 * * * deploy source $HOME/.zshrc && make -f /home/deploy/lighthouse/Makefile lighthouses -C /home/deploy/lighthouse >> /home/deploy/ligh
+thouse/logs/cron.log 2>&1
