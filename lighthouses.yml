@@ -1,9 +1,9 @@
 ---
 - name: Prepare
   hosts: localhost
-  connection: local 
+  connection: local
   vars:
-    - location: '/var/www/html/lighthouses.io37.ch'
+    - location: "/var/www/html/lighthouses.io37.ch"
   tasks:
     - name: make lighthouses
       shell: "node index.js"
@@ -15,7 +15,7 @@
     - name: register raw date
       shell: "date"
       register: date
-      
+
     - name: Display the JSON file content
       shell: "cat {{ item }}"
       with_fileglob:
@@ -34,7 +34,7 @@
 
     - name: Copy css
       copy:
-        src:  style.css
+        src: style.css
         dest: "{{ location }}/style.css"
 
     - name: bundle install
