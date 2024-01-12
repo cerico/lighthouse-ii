@@ -5,6 +5,11 @@
   vars:
     - location: "/var/www/html/lighthouses.io37.ch"
   tasks:
+    - name: Install jmespath
+      pip:
+        name: jmespath
+        state: present
+
     - name: make lighthouses
       shell: "node index.js"
 
