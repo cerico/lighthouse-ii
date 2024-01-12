@@ -1,3 +1,23 @@
+# [1.3.0](https://github.com/cerico/lighthouse-ii/compare/v1.2.1...v1.3.0) (2024-01-12)
+
+
+### Bug Fixes
+
+* dont run bundle install in gh action ([6bed9d5](https://github.com/cerico/lighthouse-ii/commit/6bed9d59e394e1f0a266ec791b8d06f895a78b6f))
+* ensure jmespath installed in playbook ([844172e](https://github.com/cerico/lighthouse-ii/commit/844172e42268914c7a28041f73df3e03937200a9))
+* explicitly specify cron rule in makefile ([c40af4a](https://github.com/cerico/lighthouse-ii/commit/c40af4af3ff82d40041ba00e96eef5f09cbb766b))
+* make tldr default target ([ba8ed10](https://github.com/cerico/lighthouse-ii/commit/ba8ed104c332f31e3c027c9b9c19b710db144f76))
+* tidy up lighthouse yml ([b31f837](https://github.com/cerico/lighthouse-ii/commit/b31f8376c89fb6925de183f94893dc4e0e75a5d1))
+
+
+### Features
+
+* add test workflow ([a32bb5e](https://github.com/cerico/lighthouse-ii/commit/a32bb5e830bc3c5790f5d7188bef4d08aec6be69))
+* add workflow step to copy crontab ([10578ab](https://github.com/cerico/lighthouse-ii/commit/10578ab3538bab2f36a1d813de47ea94a6095962))
+* run tldr in makefile if no rule ([3a6c952](https://github.com/cerico/lighthouse-ii/commit/3a6c952ca74eb74f36833d4cf2f14f8a33dd8e62))
+
+
+
 ## [1.2.1](https://github.com/cerico/lighthouse-ii/compare/v1.2.0...v1.2.1) (2023-08-05)
 
 
