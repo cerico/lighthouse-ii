@@ -41,3 +41,4 @@
       command: bundle install
       args:
         chdir: "{{ playbook_dir }}"
+      when: "'true' not in lookup('env', 'GITHUB_ACTIONS', default='') | lower"
