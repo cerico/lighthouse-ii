@@ -1,3 +1,12 @@
+## [1.3.1](https://github.com/cerico/lighthouse-ii/compare/v1.3.0...v1.3.1) (2024-07-24)
+
+
+### Bug Fixes
+
+* test for deploy ([7e0f305](https://github.com/cerico/lighthouse-ii/commit/7e0f305a45f9c044b9c97d46ffb2fe83c8483b1b))
+
+
+
 # [1.3.0](https://github.com/cerico/lighthouse-ii/compare/v1.2.1...v1.3.0) (2024-01-12)
 
 
