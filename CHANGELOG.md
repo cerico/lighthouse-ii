@@ -1,3 +1,12 @@
+## [1.3.2](https://github.com/cerico/lighthouse-ii/compare/v1.3.1...v1.3.2) (2024-07-24)
+
+
+### Bug Fixes
+
+* change order of makefile so tldr not default ([e757919](https://github.com/cerico/lighthouse-ii/commit/e7579196858c3da9bb8e8d6a4a527f478a0d0598))
+
+
+
 ## [1.3.1](https://github.com/cerico/lighthouse-ii/compare/v1.3.0...v1.3.1) (2024-07-24)
 
 
