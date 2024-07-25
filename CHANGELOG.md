@@ -1,3 +1,18 @@
+# [1.4.0](https://github.com/cerico/lighthouse-ii/compare/v1.3.2...v1.4.0) (2024-07-25)
+
+
+### Bug Fixes
+
+* ensure pip3 present before proceeding ([722b08d](https://github.com/cerico/lighthouse-ii/commit/722b08de313cfe3346740cee9e1ff3e6b3843908))
+* temporarily disable pulling all from netlify ([43bd85d](https://github.com/cerico/lighthouse-ii/commit/43bd85dddb089c93ad1af0e196c83c4c9ff35b69))
+
+
+### Features
+
+* update urls list ([1759e05](https://github.com/cerico/lighthouse-ii/commit/1759e05e699006760304c3fb6f57c5e0fbcdd743))
+
+
+
 ## [1.3.2](https://github.com/cerico/lighthouse-ii/compare/v1.3.1...v1.3.2) (2024-07-24)
 
 
